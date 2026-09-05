@@ -105,7 +105,7 @@ export default async function handler(req, res) {
       '/deltarget <username>\n' +
       '/listtarget\n' +
       '/dailyreport - Kirim laporan harian penggunaan Gmail (alias /rekap)'
-    ));
+    ); });
 
     // ========== ADMIN COMMANDS ==========
     // ponytail: langsung pakai DB (tanpa fetch BASE_URL) agar tidak timeout / tidak respon saat BASE_URL kosong
