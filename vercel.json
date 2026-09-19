@@ -1,17 +1,10 @@
 {
   "version": 2,
-  "builds": [{ "src": "api/*.js", "use": "@vercel/node" }],
-  "routes": [
-    { "src": "/api/send-email", "dest": "/api/send-email.js" },
-    { "src": "/api/check-inbox", "dest": "/api/check-inbox.js" },
-    { "src": "/api/verify-apikey", "dest": "/api/verify-apikey.js" },
-    { "src": "/api/telegram-webhook", "dest": "/api/telegram-webhook.js" },
-    { "src": "/api/set-telegram-webhook", "dest": "/api/set-telegram-webhook.js" },
-    { "src": "/api/cleanup-expired-keys", "dest": "/api/cleanup-expired-keys.js" },
-    { "src": "/api/reset-daily-usage", "dest": "/api/reset-daily-usage.js" },
-    { "src": "/api/migrate", "dest": "/api/migrate.js" },
-    { "src": "/api/admin", "dest": "/api/admin.js" },
-    { "src": "/api/daily-report", "dest": "/api/daily-report.js" }
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/index.js"
+    }
   ],
   "crons": [
     {
